@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Diwali, My Love!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Basic Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Font Styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: url('https://cdn.pixabay.com/photo/2019/10/23/15/43/diwali-4571423_960_720.jpg') no-repeat center center/cover;
+      color: #ffffff;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .container {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      width: 90%;
+      max-width: 400px;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.5em;
+      color: #ffcc80;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+      color: #ffcc80;
+    }
+
+    .slide-page {
+      display: none;
+      padding-top: 20px;
+    }
+
+    .button-container {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    button {
+      padding: 12px 25px;
+      margin: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1em;
+      color: #333;
+      transition: transform 0.2s, background-color 0.3s;
+      width: 80%;
+      max-width: 200px;
+    }
+
+    #btn-miss-you-too {
+      background-color: #ffeb3b;
+    }
+
+    #btn-dont-miss-you {
+      background-color: #f48fb1;
+      position: relative;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+      
+      button {
+        padding: 10px 18px;
+        font-size: 0.9em;
+        margin: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Happy Diwali, My Love!</h1>
+    <p>Wishing you a bright, prosperous, and joyful Diwali my princess shoonaaaaa babyyyyy muaaaaaahhhhh!</p>
+    <button onclick="showSlidePage()">Slide to Reveal</button>
+
+    <div class="slide-page" id="slidePage">
+      <p>I miss you so much!</p>
+      <div class="button-container">
+        <button id="btn-miss-you-too" onclick="imissyotoo()">I miss you too</button>
+        <button id="btn-dont-miss-you" onclick="moveButton()">I don't miss you</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showSlidePage() {
+      document.getElementById('slidePage').style.display = 'block';
+    }
+
+    function moveButton() {
+      const btn = document.getElementById('btn-dont-miss-you');
+      const randomX = Math.floor(Math.random() * (window.innerWidth - btn.offsetWidth));
+      const randomY = Math.floor(Math.random() * (window.innerHeight - btn.offsetHeight));
+      btn.style.position = 'absolute';
+      btn.style.left = randomX + 'px';
+      btn.style.top = randomY + 'px';
+      
+    }
+
+    function imissyotoo(){
+        alert("ohh i know that my cute little princesss");
+    }
+  </script>
+</body>
+</html>
